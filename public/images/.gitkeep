@@ -1,0 +1,6 @@
+# Add your product images here
+# Required directories:
+# - categories/ (men.jpg, women.jpg, kids.jpg, accessories.jpg)
+# - products/ (product images)
+# - testimonials/ (customer photos)
+# - og-image.jpg (1200x630px for social media)

@@ -1,36 +1,145 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# StyleHub - Clothing Shop Website
+
+A modern, production-ready clothing shop website built with Next.js 16, TypeScript, and Tailwind CSS.
+
+## Features
+
+- **Modern Tech Stack**: Next.js 16 App Router, TypeScript, Tailwind CSS
+- **SEO Optimized**: Complete metadata, OpenGraph tags, and JSON-LD schema markup
+- **Mobile-First Design**: Fully responsive across all devices
+- **Performance Optimized**: Server components, optimized images, and fast loading
+- **Lead Generation**: Contact forms, WhatsApp integration, and click-to-call
+- **Product Categories**: Men, Women, Kids, and Accessories
+- **Reusable Components**: DRY architecture with modular components
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
+│   ├── products/          # Product category pages
+│   └── layout.tsx         # Root layout with Header/Footer
+├── components/
+│   ├── ui/                # Reusable UI components
+│   └── sections/          # Section components (Header, Footer, etc.)
+├── constants/             # Site configuration and data
+├── schemas/               # JSON-LD schema generators
+├── seo/                   # SEO metadata helpers
+├── types/                 # TypeScript type definitions
+└── utils/                 # Utility functions
+```
 
 ## Getting Started
 
-First, run the development server:
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Site Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit `src/constants/index.ts` to update:
+- Site name, tagline, and description
+- Contact information (phone, email, WhatsApp)
+- Business address and hours
+- Social media links
+- Navigation links
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Products
 
-## Deploy on Vercel
+Add or modify products in `src/constants/index.ts` in the `FEATURED_PRODUCTS` array.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Styling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+All styling uses Tailwind CSS utility classes. Update `tailwind.config.ts` to customize:
+- Colors
+- Typography
+- Spacing
+- Breakpoints
+
+### Fonts
+
+The project uses:
+- **Montserrat** for headings
+- **Open Sans** for body text
+
+Change fonts in `src/app/layout.tsx`.
+
+## Adding Images
+
+Place images in the `public/images/` directory:
+- `/images/categories/` - Category images
+- `/images/products/` - Product images
+- `/images/testimonials/` - Customer photos
+- `/images/og-image.jpg` - Social media preview image
+
+## SEO & Schema
+
+- SEO metadata is generated in `src/seo/metadata.ts`
+- JSON-LD schemas are in `src/schemas/`
+- Each page has unique metadata and canonical URLs
+
+## Lead Capture
+
+The site includes:
+- Contact form with validation
+- WhatsApp click-to-chat
+- Click-to-call phone links
+- Sticky CTAs on mobile
+
+## Deployment
+
+### Vercel (Recommended)
+
+```bash
+vercel
+```
+
+### Other Platforms
+
+Build the project and deploy the `.next` folder:
+
+```bash
+npm run build
+```
+
+## Tech Stack
+
+- **Framework**: Next.js 16
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Fonts**: Google Fonts (Montserrat, Open Sans)
+- **Icons**: SVG icons
+- **Image Optimization**: next/image
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers
+
+## License
+
+All rights reserved.
